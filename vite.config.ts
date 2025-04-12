@@ -8,28 +8,10 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./src/**/*.{html,js}"],
-  theme: {
-    extend: {
-      colors: {
-        primary: '#de2c4d',
-        secondary: '#fb923c',
-      },
-      fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        averia: ['Averia Serif Libre', 'serif'],
-      },
-      container: {
-        center: true,
-        padding: {
-          default: '1rem',
-          sm: '2rem',
-          md: '3rem',
-          lg: '4rem',
-          xl: '5rem',
-          '2xl': '6rem',
-        },
-      }
+  server: {
+    watch: {
+      // Désactive les notifications pour le dossier public
+      ignored: ['!**/public/**'],
     },
   },
 })
